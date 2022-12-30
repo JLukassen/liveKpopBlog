@@ -1,0 +1,18 @@
+RewriteEngine on  
+RewriteRule ^http://%{HTTP_HOST}%{REQUEST_URI} [END,NE]
+Options -Indexes
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/yooastan/yooablog"
+PassengerBaseURI "/"
+PassengerPython "/home/yooastan/virtualenv/yooablog/3.9/bin/python"
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+SetEnv NAME yooastan_kpopalypsenow
+SetEnv PASSWORD B3$tc0d3r!
+SetEnv PORT 3306
+SetEnv SECRET_KEY django-insecure-jlrjhj=5z4)vp9#7j_9n(g*!3bo-kk%=(7czv7@b*t(%7w05&d
+SetEnv USER yooastan_yooastan
+SetEnv HOST localhost
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
